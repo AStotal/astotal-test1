@@ -54,7 +54,7 @@
     </div>
 
     <div class="modal-footer">
-        <a class="btn btn-default" href="/users">OK</a>
+        <a class="btn btn-default" href="<c:url value='/users'/>">OK</a>
     </div>
 </div>
 </body>

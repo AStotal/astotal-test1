@@ -24,7 +24,8 @@
     <div class="modal-header">
         <h4 class="modal-title">${userForm['new'] ? 'Add new user' : 'Update user'}</h4>
     </div>
-    <form:form action="/users" method="post" modelAttribute="userForm" commandName="userForm"
+    <c:url value="/users" var="actionUrl"/>
+    <form:form action="${actionUrl}" method="post" modelAttribute="userForm" commandName="userForm"
                class="form-horizontal">
 
         <div class="modal-body">
@@ -67,7 +68,7 @@
         </div>
         <div class="modal-footer">
             <button type="submit" class="btn btn-default">${userForm['new'] ? 'Add' : 'Update'}</button>
-            <a class="btn btn-default" href="/users">Cancel</a>
+            <a class="btn btn-default" href="<c:url value="/users"/>">Cancel</a>
         </div>
 
     </form:form>

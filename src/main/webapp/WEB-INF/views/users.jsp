@@ -30,7 +30,8 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/users">User database</a>
         </div>
-        <form action="/users/search" method="get" class="navbar-form navbar-left" role="search">
+        <c:url value="/users/search" var="actionSearch"/>
+        <form action="${actionSearch}" method="get" class="navbar-form navbar-left" role="search">
             <a class="btn btn-default" href="/users/add" id="addUserButton">Add user</a>
             <div class="form-group">
                 <select class="selectpicker" name="searchBy">
@@ -52,19 +53,20 @@
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
                 <c:when test="${!empty currentPage}">
-                    <c:set value="/users/page/${currentPage-1}-10" var="prevPage"/>
+                    <c:url value="/users/page/${currentPage-1}-10" var="prevPage"/>
                     <li class="${currentPage == 1 ? 'disabled':''}"><a
                             href="${currentPage == 1 ? '#': prevPage}"><span
                             class="glyphicon glyphicon-chevron-left"></span></a></li>
 
-                    <li><a href="/users" title="Show full list"><b>${currentPage}</b></a></li>
+                    <c:url value="/users" var="usersPage"/>
+                    <li><a href="${usersPage}" title="Show full list"><b>${currentPage}</b></a></li>
 
-                    <c:set value="/users/page/${currentPage+1}-10" var="nextPage"/>
+                    <c:url value="/users/page/${currentPage+1}-10" var="nextPage"/>
                     <li class="${!hasUsers ? 'disabled':''}"><a href="${!hasUsers ? '#' : nextPage}"><span
                             class="glyphicon glyphicon-chevron-right"></span></a></li>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="/users/page/1-10"><b>Show by page</b></a></li>
+                    <li><a href="users/page/1-10"><b>Show by page</b></a></li>
                 </c:otherwise>
             </c:choose>
         </ul>
@@ -72,7 +74,8 @@
 </nav>
 
 <c:if test="${!empty listUsers}">
-    <form:form action="/users/add" modelAttribute="user">
+    <c:url value="/users/add" var="actionAdd"/>
+    <form:form action="${actionAdd}" modelAttribute="user">
         <table class="table table-stripped">
             <tr>
                 <th class="col-md-1">ID</th>

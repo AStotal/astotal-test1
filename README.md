@@ -10,6 +10,6 @@
 
  4. Put compilied `target/JavaCRUD.war` into Tomcat7 webapps folder and run Tomcat
 
- 5. Application can be accessed by address `http://127.1:8080/JavaCRUD/users`
+ 5. Application can be accessed by address [http://localhost:8080/JavaCRUD/users]()
  
  ![Mainpage image](example.png)
