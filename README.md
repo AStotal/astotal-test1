@@ -1,6 +1,6 @@
-### The first test task for JavaRush internship
+## The first test task for JavaRush internship ##
 
- ##### How to
+### How to ###
 
  1. Create table User with sql `/src/main/webapp/resources/SQL/createDb_TEST.sql`
 
