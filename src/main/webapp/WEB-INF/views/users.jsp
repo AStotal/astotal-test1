@@ -32,7 +32,8 @@
         </div>
         <c:url value="/users/search" var="actionSearch"/>
         <form action="${actionSearch}" method="get" class="navbar-form navbar-left" role="search">
-            <a class="btn btn-default" href="/users/add" id="addUserButton">Add user</a>
+            <c:url value="/users/add" var="actionAdd"/>
+            <a class="btn btn-default" href="${actionAdd}" id="addUserButton">Add user</a>
             <div class="form-group">
                 <select class="selectpicker" name="searchBy">
                     <optgroup label="Search parameter">
