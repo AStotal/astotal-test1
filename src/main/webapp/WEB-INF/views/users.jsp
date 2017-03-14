@@ -66,7 +66,8 @@
                             class="glyphicon glyphicon-chevron-right"></span></a></li>
                 </c:when>
                 <c:otherwise>
-                    <li><a href="users/page/1-10"><b>Show by page</b></a></li>
+                    <c:url value="/users/page/1-10" var="showPages"/>
+                    <li><a href="${showPages}"><b>Show by page</b></a></li>
                 </c:otherwise>
             </c:choose>
         </ul>
