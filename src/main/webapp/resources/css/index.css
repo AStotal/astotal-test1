@@ -1,0 +1,33 @@
+body {
+    padding: 10px 10px 10px 10px;
+}
+
+.invisible{
+    opacity:0;
+    position:absolute;
+    left:9999px;"
+}
+
+.no-margin {
+    margin-top: 0;
+}
+
+.icon-green:hover {
+    color: #4cae4c;
+}
+.icon-red:hover {
+    color: #a40000;
+}
+
+/* Links */
+a.icon{
+    color: #9f9f9f;
+}
+
+a.icon:hover:visited{
+    text-decoration: none;
+}
+
+.has-error{
+    box-shadow: inset 0 0 5px #cdcbca, 0 0 5px red;
+}
