@@ -80,7 +80,7 @@
                 <th class="col-md-1">Age</th>
                 <th class="col-md-1 text-center">Is admin</th>
                 <th class="col-md-2">Created</th>
-                <th class="col-md-2 text-center">Edit</th>
+                <th class="col-md-2 text-center">Action</th>
             </tr>
 
             <c:forEach items="${listUsers}" var="user">
